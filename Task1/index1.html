@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Temperature converter</title>
+        <link rel="stylesheet" href="style.css"/>
+    </head>
+    <body><center>
+        <div class="heading"><h1>Temperatue Conveter</h1>
+        <h2>Celsius To Fahrenheit and Fahrenheit To Celsius</h2>
+        </div>
+        <br><br>
+        <div class="conatiner">
+            <div class="cf">
+                <h2><label for="celsius" >Celsius :</label>
+                <input type="number" id="celsius"/></h2>
+            </div>
+            
+            <div class="cf">
+                <h2><label for="fahrenheit" >Fahrenheit :</label>
+                <input type="number" id="fahrenheit"/></h2>
+            </div>
+            
+        </div>
+	<br>
+        <h2>Please give the Celsius value to convert in Fahrenheit.
+        </h2>
+        <h2>And Fahrenheit To Celsius</h2>
+	<br>
+	
+	<img src="temp.jpeg"></img>
+	
+        <script>
+		let celsius= document.getElementById('celsius');
+		let fahrenheit= document.getElementById('fahrenheit');
+
+		celsius.oninput=()=>{
+    		let output=(parseFloat(celsius.value)*9)/ 5 + 32;
+    		fahrenheit.value=parseFloat(output.toFixed(2));
+		};
+
+		fahrenheit.oninput=()=>{
+   		 let output=((parseFloat(fahrenheit.value)-32) * 5) / 9
+   		 celsius.value=parseFloat(output.toFixed(2));
+		};
+	</script>
+
+    </body>
+</html>>
